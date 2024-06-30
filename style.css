@@ -6,251 +6,245 @@
     text-decoration: none;
     list-style: none;
 }
-.header{
-    position: fixed;
+
+body {
+    overflow-x: hidden;
+}
+
+.header {
+    position: sticky;
     top: 0;
-    left: 0;
-    width: 100%;
-    padding: 35px 12%;
-    background: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(10px);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-}
-.logo{
-    font-size: 25px;
-    color: white;
-    font-weight: 600;
-    transition: 0.3s ease;
-}
-.logo:hover{
-    color: orangered;
-    text-shadow: 0 0 25px orangered,
-                 0 0 50px orangered;
-    transform: scale(1.1);             
-}
-span{
-    color: orangered;
-}
-.navbar a{
-    font-size: 18px;
-    color: white;
-    font-weight: 500;
-    margin: 0 20px;
-    border-bottom: 3px solid transparent;
-    transition: 0.3s ease;
-}
-.navbar a:hover,
-.navbar a.active{
-    color: orangered;
-    border-bottom: 3px solid orangered;
-}
-.contact{
-    padding: 10px 28px;
     background-color: white;
-    color: black;
-    border: 2px solid transparent;
-    border-radius: 8px;
-    font-size: 16px;
-    letter-spacing: 1px;
-    font-weight: 600;
-    transition: 0.3s ease;
-}
-
-.contact:hover{
-    background-color: orangered;
-    box-shadow: 0 0 25px orangered;
-    color: white;
-}
-.home{
-    width: 100%;
-    min-height: 100vh;
-    background: rgb(241, 241, 241);
-    display: flex;
-    align-items: center;
-    gap: 7em;
-    padding: 30px 12% 0;
-}
-.home-content{
-    max-width: 800px;
-    margin: 100px 50px;
-}
-.home-content h3{
-    font-size: 42px;
-}
-.home-content h1{
-    font-size: 62px;
-    line-height: 1.2;
-}
-.home-content p{
-    font-size: 18px;
-    margin: 25px 0 30px;
-
-}
-.btn-box{
-    width: 345px;
-    display: flex;
-    gap: 2em;
-}
-.btn-1{
-    padding: 15px 28px;
-    background-color: black;
-    color: white;
-    border: 2px solid transparent;
-    border-radius: 8px;
-    font-size: 18px;
-    letter-spacing: 1px;
-    font-weight: 600;
-    transition: 0.3s ease;
-    cursor: pointer;
-}
-.btn-1:hover{
-    background-color: white;
-    color: black;
-    border: 2px solid black;
-}
-.btn-2{
-    padding: 15px 28px;
-    background-color: orangered;
-    color: white;
-    border: 2px solid black;
-    border-radius: 8px;
-    font-size: 18px;
-    letter-spacing: 1px;
-    font-weight: 600;
-    transition: 0.3s ease;
-    cursor: pointer;
-}
-.btn-2:hover{
-    background-color: white;
-    color: orangered;
-}
-.img-box img{
-    border-radius: 50%;
-    width: 480px;
-}
-::-webkit-scrollbar{
-    width: 15px;
-}
-::-webkit-scrollbar-thumb{
-    background-color: rgba(0, 0, 0, 0.6);
-    width: 50px;
-}
-
-.about{
+    z-index: 999;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 12% 8%;
-    gap: 10em;
-    background: black;
-}
-.about-img img{
-    position: relative;
-    width: 550px;
-    box-shadow: 0 0 25px orangered,
-                0 0 50px orangered;
-                border-radius: 50%;
-}
-.about-content h2{
-    text-align: left;
-    color: white;
-    font-size: 42px;
-}
-.about-content h3{
-    font-size: 62px;
-    color: white;
-}
-.about-content p{
-    color: white;
-    font-size: 20px;
-    margin: 2em 0 3em;
-}
-.contact-form h2{
-    text-align: center;
-    margin-top: 3em;
-    margin-bottom: 1em;
-    font-size: 36px;
-}
-.contact-form form{
-    max-width: 50em;
-    margin: 1rem auto;
-    text-align: center;
-    margin-bottom: 3em;
-}
-.contact-form form .input-box{
-   display: flex;
-   justify-content: center;
-   flex-wrap: wrap; 
+    padding: 1rem;
+    height: 3rem;
+    border-bottom: 1px black solid;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 
-.contact-form form .input-box input,
-.contact-form form textarea{
-    width: 100%;
-    padding: 1.5em;
-    font-size: 18px;
+.header .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
     color: black;
-    background: rgb(241, 241, 241);
-    border-radius: 8rem;
-    margin: 1rem 0;
-    resize: none;
 }
-.footer{
-    position: relative;
-    bottom: 0;
+
+
+/* Hide navigation links on mobile */
+.desktop-nav-items {
+    display: none;    
+}
+
+#show-credentials-btn span {
+    display: block;
+}
+
+#show-credentials-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    background: transparent;
+    border: none;
+    background-color: #f2f2f2;
+    padding: 4px 12px;
+    border-radius: 14px;
+    cursor: pointer;
+}
+
+@media (min-width: 624px) {
+    .desktop-nav-items {
+        display: flex;   
+        gap: 6px;
+    }
+
+    .desktop-nav-items a {
+        color: black; 
+        padding: 2px 4px;
+    }
+
+    .desktop-nav-items a:hover {
+        color: gray;
+    }
+
+    .menu-icon {
+        display: none;
+    }
+
+    #portfolio img {
+        width: 18rem;
+        height: 18rem;
+        border-radius: 100%;
+        object-fit: cover;
+    }
+
+    main {
+        max-width: 700px;
+        margin: auto;
+    }
+}
+
+
+
+.menu-icon {
+    width: 1rem;
+}
+
+img {
     width: 100%;
-    padding: 40px 0;
-    background-color: black;
+     height: auto;
 }
-.footer .social{
-    text-align: center;
-    padding-bottom: 25px;
-    color: white;
+
+.slide-menu {
+    position: fixed;
+    top: 0;
+    right: -80%;
+    width: 80%;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+    transition: right 0.3s ease;
+    z-index: 1000;
+    padding: 20px;
 }
-.footer .social a{
-    font-size: 24px;
-    color: white;
-    border: 2px solid orangered;
-    width: 40px;
-    height: 40px;
-    line-height: 38px;
-    display: inline-block;
-    text-align: center;
-    border-radius: 50%;
-    margin: 0 8px;
-    box-shadow: inset 0 0 10px orangered, 0 0 10px orangered;
-    transition: 0.3s ease;
+.slide-menu.open {
+    right: 0;
 }
-.footer.social a:hover{
-    transform: scale(1.2)translateY(-10px);
-    color: orangered;
-    border: 2px solid orangered;
+.slide-menu .close-btn {
+    display: block;
+    text-align: right;
+    margin-bottom: 20px;
 }
-.footer ul{
-    margin-top: 0;
-    padding: 0;
+.slide-menu .close-btn button {
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.slide-menu nav a {
+    display: block;
+    margin: 15px 0;
+    text-decoration: none;
+    color: #333;
     font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 0;
+}
+
+section {
+    padding: .5rem;
+}
+
+/* Hero */
+.profile-photo img {
+    width: 100%;
+    height: 35vh;
+    object-fit: cover;
+}
+
+p {
+    font-size: 14px;
+}
+
+#portfolio img {
+    margin-bottom: 1.5rem;
+}
+
+.intro-text p {
+    margin-top: 8px;
+}
+
+.intro-text span {
+    color: orangered;
+    font-style: italic;
+    font-family: monospace;
+}
+
+/* Education */
+section .wrapper div {
+    margin-bottom: 12px;
+}
+section .wrapper .title {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+section .wrapper .title span {
+    position: absolute;
+    width: 4rem;
+    height: 2px;
+    background-color: orangered;
+}
+
+.separator {
+    display: block;
+    width: 100%;
+    height: .1px;
+    margin: 1rem 0;
+    background-color: lightgray;
+}
+
+.contact-form-wrapper .social div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.contact-form-wrapper .social a {
+    font-size: 2rem;
+    color: black;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+    border-top: 1px #cbcbcb solid;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
     text-align: center;
 }
-.footer ul li a{
-    color: white;
-    border-bottom: 3px solid orangered;
-    transition: 0.3s ease;
+
+.close-modal {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
 }
-.footer ul li a:hover{
-    border-bottom: 3px solid orangered;
+
+.close-modal:hover,
+.close-modal:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
-.footer ul li{
-    display: inline-block;
-    padding: 0 15px;
-}
-.footer .copyright{
-    margin-top: 15px;
-    text-align: center;
-    font-size: 12px;
-    color: white;
+
+.modal img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
 }
