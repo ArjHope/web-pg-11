@@ -82,8 +82,18 @@ body {
         object-fit: cover;
     }
 
+    #contact {
+        background-color: white;
+        color: black;
+    }
+
+    #contact .contact-form-wrapper .social a {
+        font-size: 2rem;
+        color: black;
+    }
+
     main {
-        max-width: 700px;
+        max-width: 624px;
         margin: auto;
     }
 }
@@ -186,6 +196,11 @@ section .wrapper .title span {
     background-color: lightgray;
 }
 
+.contact {
+    background-color: black;
+    color: white;
+}
+
 .contact-form-wrapper .social div {
     display: flex;
     flex-direction: column;
@@ -194,15 +209,17 @@ section .wrapper .title span {
 
 .contact-form-wrapper .social a {
     font-size: 2rem;
-    color: black;
+    color: white;
 }
 
 .footer {
     display: flex;
     justify-content: center;
+    background-color: black;
+    color: #333;
     align-items: center;
     padding: 1rem 0;
-    border-top: 1px #cbcbcb solid;
+    border-top: 1px #666 solid;
 }
 
 /* Modal Styles */
