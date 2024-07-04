@@ -1,267 +1,297 @@
-*{
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-    text-decoration: none;
-    list-style: none;
-}
-
-body {
-    overflow-x: hidden;
-}
-
-.header {
-    position: sticky;
-    top: 0;
-    background-color: white;
-    z-index: 999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    height: 3rem;
-    border-bottom: 1px black solid;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.header .logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: black;
-}
-
-
-/* Hide navigation links on mobile */
-.desktop-nav-items {
-    display: none;    
-}
-
-#show-credentials-btn span {
-    display: block;
-}
-
-#show-credentials-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 6px;
-    background: transparent;
-    border: none;
-    background-color: #f2f2f2;
-    padding: 4px 12px;
-    border-radius: 14px;
-    cursor: pointer;
-}
-
-@media (min-width: 624px) {
-    .desktop-nav-items {
-        display: flex;   
-        gap: 6px;
-    }
-
-    .desktop-nav-items a {
-        color: black; 
-        padding: 2px 4px;
-    }
-
-    .desktop-nav-items a:hover {
-        color: gray;
-    }
-
-    .menu-icon {
-        display: none;
-    }
-
-    #portfolio img {
-        width: 18rem;
-        height: 18rem;
-        border-radius: 100%;
-        object-fit: cover;
-    }
-
-    #contact {
-        background-color: white;
-        color: black;
-    }
-
-    #contact .contact-form-wrapper .social a {
-        font-size: 2rem;
-        color: black;
-    }
-
-    main {
-        max-width: 624px;
-        margin: auto;
-    }
-}
-
-
-
-.menu-icon {
-    width: 1rem;
-}
-
-img {
-    width: 100%;
-     height: auto;
-}
-
-.slide-menu {
-    position: fixed;
-    top: 0;
-    right: -80%;
-    width: 80%;
-    height: 100%;
-    background-color: #fff;
-    box-shadow: -2px 0 5px rgba(0,0,0,0.5);
-    transition: right 0.3s ease;
-    z-index: 1000;
-    padding: 20px;
-}
-.slide-menu.open {
-    right: 0;
-}
-.slide-menu .close-btn {
-    display: block;
-    text-align: right;
-    margin-bottom: 20px;
-}
-.slide-menu .close-btn button {
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 16px;
-}
-.slide-menu nav a {
-    display: block;
-    margin: 15px 0;
-    text-decoration: none;
-    color: #333;
-    font-size: 18px;
-}
-
-section {
-    padding: .5rem;
-}
-
-/* Hero */
-.profile-photo img {
-    width: 100%;
-    height: 35vh;
-    object-fit: cover;
 }
 
 p {
     font-size: 14px;
 }
 
-#portfolio img {
-    margin-bottom: 1.5rem;
+header {
+    position: sticky;
+    top: 0;
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 999;
 }
 
-.intro-text p {
-    margin-top: 8px;
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
 }
 
-.intro-text span {
+header nav ul li {
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+header nav ul li a:hover {
     color: orangered;
-    font-style: italic;
-    font-family: monospace;
+    text-decoration: underline;
 }
 
-/* Education */
-section .wrapper div {
-    margin-bottom: 12px;
-}
-section .wrapper .title {
-    position: relative;
-    margin-bottom: 1rem;
+header .contact-btn {
+    background-color: orange;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
 }
 
-section .wrapper .title span {
-    position: absolute;
-    width: 4rem;
-    height: 2px;
+.wrapper {
+    max-width: 1290px;
+    margin: auto;
+}
+
+
+
+.mobile-intro-text {
+display: none;
+}
+
+.intro-text, .about-text {
+    max-width: 520px;
+}
+
+.intro-text h1, .intro-text h2 {
+    font-size: 44px;
+    margin: 0;
+}
+
+.intro-text h1 span, .about-text h2 span, .about-text h1 span {
+    color: orangered;
+}
+
+.intro-text .btn {
     background-color: orangered;
+    color: white;
+    padding: 12px 28px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 20px 0;
 }
 
-.separator {
-    display: block;
-    width: 100%;
-    height: .1px;
-    margin: 1rem 0;
-    background-color: lightgray;
+.intro-image, .about-image {
+    border-radius: 101% / 145%;
 }
 
-.contact {
-    background-color: black;
+.intro-image img, .about-image img {
+    max-width: 27rem;
+    height: 34rem;
+    border-radius: 53% / 53%;
+    object-fit: cover;
+}
+
+.intro .buttons {
+    margin-top: 26px;
+}
+
+.intro .wrapper, .about-me .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 50px;
+}
+
+.about-me {
+    background-color: #333;
     color: white;
 }
 
-.contact-form-wrapper .social div {
+.about-me .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+}
+
+.contact-form {
+    padding: 50px;
+    background-color: #fff;
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+}
+
+.contact-form form {
     display: flex;
     flex-direction: column;
-    gap: 8px;
 }
 
-.contact-form-wrapper .social a {
-    font-size: 2rem;
+.contact-form form label {
+    margin-bottom: 5px;
+}
+
+.contact-form form input,
+.contact-form form textarea {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form form button {
+    background-color: orange;
     color: white;
-}
-
-.footer {
-    display: flex;
-    justify-content: center;
-    background-color: black;
-    color: #333;
-    align-items: center;
-    padding: 1rem 0;
-    border-top: 1px #666 solid;
-}
-
-/* Modal Styles */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
-    padding-top: 60px;
-}
-
-.modal-content {
-    background-color: #fefefe;
-    margin: 5% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 500px;
-    text-align: center;
-}
-
-.close-modal {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close-modal:hover,
-.close-modal:focus {
-    color: black;
-    text-decoration: none;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
 }
 
-.modal img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 20px;
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer .social-media a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer p {
+    margin: 10px 0 0 0;
+}
+
+@media (max-width: 768px) {
+    .intro .wrapper, .about-me .wrapper {
+        display: block;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+        padding: 0;
+    }
+
+    .intro-image .overlay {
+        height: 100%;
+        width: 100%;
+        opacity: .7;
+        background-color: black;
+        position: absolute;
+        bottom: 0;
+    }
+
+    .mobile-intro-text {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        z-index: 888;
+        padding: 12px; 
+        max-width: 80vw;
+    }
+
+    .mobile-intro-text h1 span, .about-text h2 span, .about-text h1 span {
+        color: orangered;
+    }
+
+    .mobile-intro-text * {
+        text-align: left;
+        color: #fff;
+        margin: 0;
+    }
+
+    .intro-text {
+        display: none;
+        max-width: 520px;
+    }
+    
+    .intro-text h1, .intro-text h2 {
+        font-size: 44px;
+        margin: 0;
+    }
+    
+    .intro-text h1 span, .about-text h2 span, .about-text h1 span {
+        color: orangered;
+    }
+    
+    .intro-text .btn {
+        background-color: orangered;
+        color: white;
+        padding: 12px 28px;
+        text-decoration: none;
+        border-radius: 5px;
+        margin: 20px 0;
+    }
+    
+    .intro-image {
+        border-radius: none;
+        position: relative;
+    }
+    
+    .intro-image img {
+        width: 100%;
+        height: 42vh;
+        object-fit: cover;
+        border-radius: 0;
+    }
+
+    .about-me {
+        background-color: #fff;
+    }
+
+    .about-image {
+        display: none;
+    }
+
+    .about-text {
+        display: block;
+        padding: 6px;
+        margin-top: 14px;
+        color: black; 
+    }
+
+    .about-text * {
+        margin: 0;
+        padding: 2px 0;
+    } 
+
+    .intro {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+
+    .intro-text,
+    .intro-image {
+        max-width: 100%;
+    }
+
+    header nav ul {
+        display: none;
+        flex-direction: column;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
 }
