@@ -1,14 +1,21 @@
 /* styles.css */
 
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+body {
+    font-family: Arial, sans-serif;
+}
+
 p {
     font-size: 14px;
+}
+
+a {
+    text-decoration: none;
 }
 
 header {
@@ -16,11 +23,14 @@ header {
     top: 0;
     background-color: #333;
     color: white;
+    padding: 10px 20px;
+    z-index: 999;
+}
+
+header .wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    z-index: 999;
 }
 
 header nav ul {
@@ -35,20 +45,33 @@ header nav ul li {
 }
 
 header nav ul li a {
-    color: white;
-    text-decoration: none;
-    padding: 5px 10px;
+    text-underline-offset: 0.5em;
+    padding-bottom: 6px;
+    color: #fff;
+    /* background:
+        linear-gradient(
+        to right,
+        #000000,
+        rgb(255, 205, 205),
+        rgba(0, 0, 0, 1)
+    );
+    background-size: 100% 2px, 0 3px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 400ms; */
+    opacity: .7;
 }
 
 header nav ul li a:hover {
-    color: orangered;
-    text-decoration: underline;
+    background-size: 0 3px, 100% 3px;
+    color: #fff;
+    opacity: 1;
 }
 
 header .contact-btn {
-    background-color: orange;
-    color: white;
-    padding: 10px 20px;
+    background-color: #fff;
+    color: #000;
+    padding: 8px 20px;
     text-decoration: none;
     border-radius: 5px;
 }
@@ -58,10 +81,8 @@ header .contact-btn {
     margin: auto;
 }
 
-
-
 .mobile-intro-text {
-display: none;
+    display: none;
 }
 
 .intro-text, .about-text {
@@ -70,7 +91,8 @@ display: none;
 
 .intro-text h1, .intro-text h2 {
     font-size: 44px;
-    margin: 0;
+    font-weight: 900;
+    line-height: 46px;
 }
 
 .intro-text h1 span, .about-text h2 span, .about-text h1 span {
@@ -86,11 +108,11 @@ display: none;
     margin: 20px 0;
 }
 
-.intro-image, .about-image {
+.mobile-hero-image, .about-image {
     border-radius: 101% / 145%;
 }
 
-.intro-image img, .about-image img {
+.mobile-hero-image img, .about-image img {
     max-width: 27rem;
     height: 34rem;
     border-radius: 53% / 53%;
@@ -101,60 +123,109 @@ display: none;
     margin-top: 26px;
 }
 
-.intro .wrapper, .about-me .wrapper {
+.intro .wrapper{
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
-    padding: 50px;
+    padding: 50px 12px;
 }
 
 .about-me {
     background-color: #333;
     color: white;
+    width: 100%;
+    position: relative;
+    height: 60vh;
+    width: 100%;
+    overflow: hidden;
 }
 
-.about-me .wrapper {
+.about-me img {
+    width: 100vw;
+    height: 160%;
+    object-fit: cover;
+    position: absolute;
+    left: -25%;
+    bottom: -70%;
+    rotate: 20deg;   
+}
+
+.about-me .overlay {
+    position: absolute;
+    background-color: #000;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 998;
+    opacity: .7;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 50px;
 }
 
-.contact-form {
-    padding: 50px;
-    background-color: #fff;
+.about-me .overlay div {
+    max-width: 60vw;
+    text-align: center;
 }
 
-.contact-form h2 {
-    margin-bottom: 20px;
+.about-me .overlay div h1 {
+    font-size: 44px;
+    font-weight: 900;
 }
 
-.contact-form form {
+.about-me .overlay div h1 span {
+    color: orangered;
+}
+
+/* EDUCATION */
+
+.education {
+    background-color: #f7f7f7;
+}
+
+.education .wrapper {
+    padding: 50px 12PX;
+}
+
+.section-title {
     display: flex;
     flex-direction: column;
+    gap: 4px;
+    margin-bottom: 24px;
+    max-width: 35vw;
 }
 
-.contact-form form label {
-    margin-bottom: 5px;
+.section-title h1 {
+    font-size: 44px;
+    font-weight: 900;
+    color: orangered;
 }
 
-.contact-form form input,
-.contact-form form textarea {
-    margin-bottom: 20px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.education .card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
 }
 
-.contact-form form button {
-    background-color: orange;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.education .card-wrapper div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background-color: #fff;
+    max-width: 390px;
+    border-radius: 4px;
+    padding: 8px;
+    outline: 1px solid #0000000e;
 }
+
+.education .card-wrapper div h3 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: auto;
+}
+
 
 footer {
     background-color: #333;
@@ -183,6 +254,9 @@ footer p {
     margin: 10px 0 0 0;
 }
 
+/* 
+MOBILE VIEW MOBILE VIEW MOBILE VIEW
+*/
 @media (max-width: 768px) {
     .intro .wrapper, .about-me .wrapper {
         display: block;
@@ -192,7 +266,7 @@ footer p {
         padding: 0;
     }
 
-    .intro-image .overlay {
+    .mobile-hero-image .overlay {
         height: 100%;
         width: 100%;
         opacity: .7;
@@ -210,7 +284,7 @@ footer p {
         max-width: 80vw;
     }
 
-    .mobile-intro-text h1 span, .about-text h2 span, .about-text h1 span {
+    .mobile-intro-text h1 span {
         color: orangered;
     }
 
@@ -222,12 +296,11 @@ footer p {
 
     .intro-text {
         display: none;
-        max-width: 520px;
     }
     
-    .intro-text h1, .intro-text h2 {
-        font-size: 44px;
-        margin: 0;
+    .mobile-intro-text h1, .mobile-intro-text h2 {
+        font-size: 24px;
+        font-weight: 800;
     }
     
     .intro-text h1 span, .about-text h2 span, .about-text h1 span {
@@ -243,12 +316,12 @@ footer p {
         margin: 20px 0;
     }
     
-    .intro-image {
+    .mobile-hero-image {
         border-radius: none;
         position: relative;
     }
     
-    .intro-image img {
+    .mobile-hero-image img {
         width: 100%;
         height: 42vh;
         object-fit: cover;
@@ -257,23 +330,22 @@ footer p {
 
     .about-me {
         background-color: #fff;
+        max-height: 28vh;
     }
 
-    .about-image {
-        display: none;
+    .about-me .overlay div {
+        max-width: 90vw;
+        text-align: center;
     }
 
-    .about-text {
-        display: block;
-        padding: 6px;
-        margin-top: 14px;
-        color: black; 
+    .about-me .overlay div h1 {
+        font-size: 24px;
+    }
+    
+    .about-me .overlay div h1 span {
+        color: orangered;
     }
 
-    .about-text * {
-        margin: 0;
-        padding: 2px 0;
-    } 
 
     .intro {
         flex-direction: column;
@@ -282,7 +354,7 @@ footer p {
     
 
     .intro-text,
-    .intro-image {
+    .mobile-hero-image {
         max-width: 100%;
     }
 
@@ -293,5 +365,13 @@ footer p {
 
     header nav ul li {
         margin: 10px 0;
+    }
+
+    .section-title {
+        max-width: 85vw;
+    }
+
+    .education .card-wrapper div {
+        min-width: 100%;
     }
 }

@@ -10,15 +10,17 @@
 
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#certificates">Certificates</a></li>
-                <li><a href="#skills">Skills</a></li>
-            </ul>
-        </nav>
-        <a href="#contact" class="contact-btn">Contact Me</a>
+        <div class="wrapper">
+            <nav>
+                <ul>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#certificates">Certificates</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                </ul>
+            </nav>
+            <a href="#contact" class="contact-btn">Contact Me</a>
+        </div>
     </header>
 
     <main>
@@ -30,12 +32,8 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem molestias dolor temporibus
                         placeat iste, quaerat aperiam saepe ducimus, vero, alias nostrum perspiciatis laboriosam.
                         Voluptatem, sed.</p>
-                    <div class="buttons">
-                        <a href="#contact" class="btn">Hire Me</a>
-                        <!-- <a href="#experience" class="btn">Experience</a> -->
-                    </div>
                 </div>
-                <div class="intro-image">
+                <div class="mobile-hero-image">
                     <div class="overlay"></div>
                     <div class="mobile-intro-text">
                         <h1>Hi <br />I'm <span> Nana Adwoa</span></h1>
@@ -49,91 +47,53 @@
         </section>
 
         <section id="about" class="about-me">
-            <div class="wrapper">
-                <div class="about-image">
-                    <img src="photo_2_2023-10-27_10-30-35.jpg" alt="Hannah">
-                </div>
-                <div class="about-text">
+            <div class="overlay">
+                <div>
                     <h1>About <span>Me</span></h1>
-                    <h2>Frontend <span>Developer</span></h2>
+                    <!-- <h2>Frontend <span>Developer</span></h2> -->
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem molestias dolor temporibus
                         placeat iste, quaerat aperiam saepe ducimus, vero, alias nostrum perspiciatis laboriosam.
                         Voluptatem, sed.</p>
                 </div>
-
             </div>
+            <img src="photo_2_2023-10-27_10-30-35.jpg" alt="">
         </section>
 
-        <section id="portfolio" class="intro">
+        <section id="education" class="education">
             <div class="wrapper">
-                <div class="intro-text">
+                <div class="section-title">
                     <h1>Education</h1>
-                    <div>
+                    <p>Nana Adwoa, an Environmental Science graduate from KNUST, also holds a Web Development Certificate from Bismuth Institute of Technology.</p>
+                </div>
+                    <div class="card-wrapper">
                         <div>
                             <h3>Kwame Nkrumah University of Science and Technology</h3>
+                            <p>Bachelor of Science - Bs, Environment Science
+                                2020 - 2024</p>
                         </div>
                         <div>
-                            <h3>Kwame Nkrumah University of Science and Technology</h3>
+                            <h3>Bismuth Institute of Technology</h3>
+                            <p>Frontend Developer
+                                2021 - 2024</p>
                         </div>
+                        <div>
+                            <h3>                        Coursera Online Learning Platform</h3>
+                            <p>Data Analysis
+                                2021 - 2024</p>
+                        </div>
+                        <!-- <div>
+                            <h3>Bismuth Institute of Technology</h3>
+                            <p>Frontend Developer
+                                2021 - 2024</p>
+                        </div>
+                        <div>
+                            <h3>                        Coursera Online Learning Platform</h3>
+                            <p>Data Analysis
+                                2021 - 2024</p>
+                        </div> -->
                     </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem molestias dolor temporibus
-                        placeat iste, quaerat aperiam saepe ducimus, vero, alias nostrum perspiciatis laboriosam.
-                        Voluptatem, sed.</p>
-                    <div class="buttons">
-                        <a href="#contact" class="btn">Hire Me</a>
-                        <!-- <a href="#experience" class="btn">Experience</a> -->
-                    </div>
-                </div>
-                <div class="intro-image">
-                    <div class="overlay"></div>
-                    <div class="mobile-intro-text">
-                        <h1>Educ</h1>
-                        <h2>An environmental scientist</h2>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem eligendi quasi animi officiis
-                            quam quia velit omnis eaque veritatis placeat!</p>
-                    </div>
-                    <!-- <img src="photo_6_2023-10-27_10-30-35.jpg" alt="Hannah"> -->
-                </div>
             </div>
         </section>
-
-        <section id="contact" class="contact-form">
-            <h2>Contact Me</h2>
-            <form action="submit_form.php" method="post">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone" required>
-                <label for="subject">Subject</label>
-                <input type="text" id="subject" name="subject" required>
-                <label for="message">Your Message</label>
-                <textarea id="message" name="message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </section>
-        <section>
-            <div class="relative">
-                <button aria-expanded="false"
-                    class="bg-blue-400 text-white px-4 py-2 rounded-lg font-semibold hover:brightness-110 flex items-center whitespace-nowrap">
-                    Dropdown button
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 inline ml-1" fill="none"
-                        stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-width="2" d="M5 10l7 7 7-7"></path>
-                    </svg>
-                </button>
-                <ul class="absolute bg-white rounded-lg shadow-lg py-3 w-max z-10 mt-3">
-                    <li><a class="px-4 py-2 flex gap-2 items-center outline-0 focus:bg-neutral-100 hover:bg-neutral-100 whitespace-nowrap"
-                            href="#">Action</a></li>
-                    <li><a class="px-4 py-2 flex gap-2 items-center outline-0 focus:bg-neutral-100 hover:bg-neutral-100 whitespace-nowrap"
-                            href="#">Another action</a></li>
-                    <li><a class="px-4 py-2 flex gap-2 items-center outline-0 focus:bg-neutral-100 hover:bg-neutral-100 whitespace-nowrap"
-                            href="#">Something else here very long</a></li>
-                </ul>
-            </div>
-        </section>
-
     </main>
 
 
