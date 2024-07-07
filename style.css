@@ -179,14 +179,16 @@ header .contact-btn {
     color: orangered;
 }
 
-/* EDUCATION */
+/* GENERIC SECTION */
 
-.education {
-    background-color: #f7f7f7;
+section {
+    margin-bottom: 8px;
 }
 
-.education .wrapper {
-    padding: 50px 12PX;
+section .section-title-wrapper {
+    display: flex;
+    justify-content: start;
+    text-align: start;
 }
 
 .section-title {
@@ -203,13 +205,21 @@ header .contact-btn {
     color: orangered;
 }
 
-.education .card-wrapper {
+section {
+    background-color: #f7f7f7;
+}
+
+section .wrapper {
+    padding: 50px 12PX;
+}
+
+section .card-wrapper {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
 }
 
-.education .card-wrapper div {
+section .card-wrapper div {
     display: flex;
     flex-direction: column;
     gap: 4px;
@@ -220,12 +230,33 @@ header .contact-btn {
     outline: 1px solid #0000000e;
 }
 
-.education .card-wrapper div h3 {
+section .card-wrapper div h3 {
     font-size: 24px;
     font-weight: 700;
     line-height: auto;
 }
 
+
+/* EXPERIENCES & SKILLS */
+
+.experience .section-title-wrapper, 
+.skills .section-title-wrapper {
+    display: flex;
+    justify-content: end;
+    text-align: end;
+}
+
+.experience .card-wrapper, 
+.skills .card-wrapper {
+    display: flex;
+    /* Place content to the end: try placing tham at the center to see how it looks */
+    justify-content: flex-end; 
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+
+/* FOOTER */
 
 footer {
     background-color: #333;
@@ -370,6 +401,8 @@ MOBILE VIEW MOBILE VIEW MOBILE VIEW
     .section-title {
         max-width: 85vw;
     }
+
+    /* EDUCATION */
 
     .education .card-wrapper div {
         min-width: 100%;
