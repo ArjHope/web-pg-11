@@ -317,12 +317,11 @@ section .card-wrapper div h3 {
 
 /* CERTIFICATES */
 .certificates .card-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    /* Place content to the end: try placing tham at the center to see how it looks */
-    justify-content: center;
+    display: flex;
+    flex-wrap: nowrap;
     align-items: center;
     gap: 8px;
+    overflow: auto;
 }
 
 .certificates .card-wrapper div {
@@ -330,7 +329,7 @@ section .card-wrapper div h3 {
     flex-direction: column;
     gap: 4px;
     background-color: #fff;
-    max-width: 690px;
+    min-width: 390px;
     border-radius: 4px;
     padding: 8px;
     outline: 1px solid #0000000e;
@@ -610,9 +609,11 @@ MOBILE VIEW MOBILE VIEW MOBILE VIEW
 
     /* CERTIFICATES */
     .certificates .card-wrapper {
-        display: grid;
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
         gap: 8px;
+        overflow: auto;
     }
 
     .skills .card-wrapper {
