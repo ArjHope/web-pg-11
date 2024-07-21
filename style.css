@@ -85,6 +85,13 @@ header .contact-btn {
     border-radius: 5px;
 }
 
+header .logo {
+    font-size: 34px;
+    font-style: italic;
+    font-weight: 800;
+    color: orangered;
+}
+
 .slide-menu {
     display: none;
 }
@@ -618,5 +625,11 @@ MOBILE VIEW MOBILE VIEW MOBILE VIEW
 
     .skills .card-wrapper {
         justify-content: normal;
+    }
+
+    .skills .card-wrapper div {
+        max-width: 390px;
+        width:420px;
+        /* width: 390px; */
     }
 }
