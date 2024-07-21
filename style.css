@@ -261,8 +261,8 @@ section .card-wrapper div h3 {
 .experience .section-title-wrapper,
 .skills .section-title-wrapper {
     display: flex;
-    justify-content: end;
-    text-align: end;
+    justify-content: start;
+    text-align: start;
 }
 
 .skills .card-wrapper {
@@ -312,7 +312,7 @@ section .card-wrapper div h3 {
 }
 
 .skills .card-wrapper {
-    justify-content: center;
+    justify-content: start;
 }
 
 /* CERTIFICATES */
